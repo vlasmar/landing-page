@@ -10,7 +10,7 @@ The goal is to build a fully responsive **Landing Page** using modern CSS techni
 ---
 
 ## 🚀 Live Demo
-
+https://vlasmar.github.io/landing-page/
 
 ---
 
