@@ -18,8 +18,9 @@ https://vlasmar.github.io/landing-page/
 - Fully responsive design  
 - Clean modern layout  
 - Hero section with CTA  
-- Features grid  
+- Information grid  
 - Styled header + navigation  
+- Gallery grid
 - Footer section
 
 ---
