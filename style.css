@@ -1,3 +1,7 @@
+/* =====================
+   RESET & GLOBAL STYLES
+===================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,13 +15,42 @@ body {
     line-height: 1.5;
 }
 
-.header-container, .footer-container {
-    padding: 1em 18em;
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 section {
-    padding: 1rem 0;
+    padding: 4rem 0;
 }
+
+/* =====================
+   UTILITIES
+===================== */
+button {
+  background-color: #4f46e5;
+  color: #F9FAF8;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   HEADER / NAVBAR
+===================== */
 
 .header-container, .hero, .footer-container {
     background-color: #1F2937;
@@ -27,6 +60,7 @@ section {
 .header-container {
     display: flex;
     justify-content: space-between;
+    padding: 3rem 18rem;
 }
 
 nav a, .hero-secondary-text {
@@ -34,7 +68,6 @@ nav a, .hero-secondary-text {
     color: #E5E7EB;
 }
 
-/* Header section style */
 .hero-logo {
     font-size: 1.5em;
     color: #F9FAF8;
@@ -49,10 +82,6 @@ header .nav-links {
     list-style-type: none;
 }
 
-nav a {
-    text-decoration: none;
-}
-
 nav a:hover {
     cursor: pointer;
     color: purple;
@@ -61,7 +90,10 @@ nav a:hover {
     transition: 0.2s ease-in-out;
 }
 
-/* Hero section */
+/* =====================
+   HERO SECTION
+===================== */
+
 .hero-container {
     padding: 8em 18em;
     display: flex;
@@ -70,42 +102,23 @@ nav a:hover {
     align-items: center;
 }
 
+.hero-text {
+    flex: 1;
+}
+
 .hero-main-text {
     font-size: 3em;
 }
 
-.hero-text button {
-    padding: 0.5em 1.5em;
-    background-color: #3882F6;
-    border: none;
-    border-radius: 0.5em;
-    color: #F9FAF8;
-    font-weight: 600;
-    margin-top: 0.8em;
-    font-size: 1em;
-}
-
-.hero-text button:hover {
-    color: violet;
-    cursor: pointer;
-    opacity: 0.8;
-  transform: scale(1.05);
-  transition: 0.2s ease-in-out;
-}
-
 .hero-image {
     background-color: grey;
+    flex: 1;
 }
 
+/* =====================
+   INFORMATION
+===================== */
 
-/* Main section */
-main {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
-}
-
-/* Information section */
 .information h2 {
     text-align: center;
     font-size: 2.25em;
@@ -130,7 +143,10 @@ main {
     gap: 0.3em;
 } 
 
-/* Blockquote section */
+/* =====================
+   BLOCKQUOTE
+===================== */
+
 .blockquote-container {
     background-color: #E5E7EB;
     color: #1F2937;
@@ -147,12 +163,15 @@ main {
     font-style: normal;
 }
 
-/* Gallery section */
+/* =====================
+   GALLERY (CSS GRID)
+===================== */
+
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1em;
-    padding: 5em 0;
+    padding: 8em 18em;
 }
 
 .gallery-container img {
@@ -164,8 +183,12 @@ main {
     grid-row: 1 / span 2;
 }
 
-/* Call-to-action section */
+/* =====================
+   CALL-TO-ACTION
+===================== */
+
 .cta-container {
+    margin: 1em 18em;
     background-color: #3882F6;
     padding: 3em 5em;
     border-radius: 0.5em;
@@ -203,7 +226,10 @@ main {
   transition: 0.2s ease-in-out;
 }
 
-/* Footer */
+/* =====================
+   FOOTER
+===================== */
+
 .footer-container {
     text-align: center;
     color: #E5E7EB;
@@ -211,20 +237,27 @@ main {
 }
 
 /* Media queries for tablets */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero-container {
     flex-direction: column;
-    gap: 2em; /* Adjust gap for mobile */
+    text-align: center;
+    gap: 2em; 
   }
+}
 
+@media (max-width: 600px) {
   .nav-links {
     flex-direction: column;
     justify-content: center;
-    gap: 0.5em; /* Space out navigation items */
+    gap: 0.5em;
   }
 
   .hero-main-text {
-    font-size: 2em; /* Scale down text size for small screens */
+    font-size: 2rem; 
+  }
+
+  .information-items-container {
+    flex-direction: column;
   }
 
   .cta-container {
